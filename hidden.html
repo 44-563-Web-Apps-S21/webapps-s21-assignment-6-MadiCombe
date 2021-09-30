@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab/Assignment 6</title>
+    </head>
+ <header>Hidden Things By: Madi Combe</header>
+<body>
+
+<h2>Getting input</h2>
+
+<form>
+    <label for="form1_age">Enter the secret word</label>
+    <input type ="password" id="secret-word" name="secret-word" value="secret"> <br>
+
+    <label for="guess">Enter a guess</label>
+    <input type ="text" id="guess" name="guess"> <br>
+
+    <input type="button" onclick="processGuess()" value="Check your Guess">
+</form>
+
+
+<p id="result"></p>
+
+<script> 
+let correct = 0
+let wrong = 0
+function processGuess(){
+    word = document.getElementById("secret-word").value
+    guess = document.getElementById("guess").value
+        if(word = guess){
+        correct+=1
+        alert("Congratulations!")
+    } 
+    else {
+        wrong+=1
+        alert("Sorry!")
+    }
+}
+
+</script>
+
+</body>
+</html> 
