@@ -27,13 +27,16 @@ let wrong = 0
 function processGuess(){
     word = document.getElementById("secret-word").value
     guess = document.getElementById("guess").value
+    out = document.getElementById("result")
         if(word = guess){
         correct+=1
         alert("Congratulations!")
+        out.innerHTML = "Correct:"; write(correct)
     } 
     else {
         wrong+=1
         alert("Sorry!")
+        out.innerHTML = "Wrong:"; write(wrong)
     }
 }
 
