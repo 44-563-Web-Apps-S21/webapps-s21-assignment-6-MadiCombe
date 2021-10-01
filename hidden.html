@@ -25,18 +25,17 @@
 var correct = 0
 var wrong = 0
 function processPhrase(){
-    word = document.getElementById("secret-word")
-    guess = document.getElementById("guess")
-    if (word === guess){
+    word = document.getElementById("secret-word").value
+    guess = document.getElementById("guess").value
+    if (word == guess){
         correct+=1
         alert("Access Allowed")
-        document.getElementById("result") = "Correct: ", correct
     }
     else{
         wrong+=1
         alert("Access Denied")
-        document.getElementById("result") = "Wrong: ", wrong
     }
+    document.getElementById("result").innerHTML = ("Correct: " + correct + "   " + "Wrong: " + wrong)
 }
 
 </script>
