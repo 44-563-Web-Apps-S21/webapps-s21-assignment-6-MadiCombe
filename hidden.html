@@ -9,34 +9,33 @@
 <h2>Getting input</h2>
 
 <form>
-    <label for="form1_age">Enter the secret word</label>
-    <input type ="password" id="secret-word" name="secret-word" value="secret"> <br>
+    <label for="secretword">Enter the secret word</label>
+    <input type ="password" id="secret-word" name="secret-word" value="Let Me In"> <br>
 
     <label for="guess">Enter a guess</label>
     <input type ="text" id="guess" name="guess"> <br>
 
-    <input type="button" onclick="processGuess()" value="Check your Guess">
+    <input type="button" onclick="processPhrase()" value="Check your Guess">
 </form>
 
 
-<p id="result"></p>
+<p id="result">Result:</p>
 
 <script> 
-let correct = 0
-let wrong = 0
-function processGuess(){
-    word = document.getElementById("secret-word").value
-    guess = document.getElementById("guess").value
-    out = document.getElementById("result")
-        if(word = guess){
+var correct = 0
+var wrong = 0
+function processPhrase(){
+    word = document.getElementById("secret-word")
+    guess = document.getElementById("guess")
+    if (word === guess){
         correct+=1
-        alert("Congratulations!")
-        out.innerHTML = "Correct:"; write(correct)
-    } 
-    else {
+        alert("Access Allowed")
+        document.getElementById("result") = "Correct: ", correct
+    }
+    else{
         wrong+=1
-        alert("Sorry!")
-        out.innerHTML = "Wrong:"; write(wrong)
+        alert("Access Denied")
+        document.getElementById("result") = "Wrong: ", wrong
     }
 }
 
