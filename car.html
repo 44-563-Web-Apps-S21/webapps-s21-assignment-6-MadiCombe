@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html>
- 
+ <head>
+     <title>MCombe orders a car</title>
+     <header>Check Boxes</header>
+ </head>
 <body>
 
 <h2>Getting input</h2>
-
+<form>
+    <label>Electric</label>
+    <input type="checkbox" id="electirc" value="electirc">
+    <label>AC</label>
+    <input type="checkbox" id="ac" value="ac">
+    <label>GPS</label>
+    <input type="checkbox" id="gps" value="gps">
+    <input type="button" onclick="updateCar()" value="Update the car">
+</form>
+<p id="out">Result Here</p>
+<form>
+    <label>Enter a Property</label>
+    <input type="text" id="prop" value="color">
+    <label>Enter a Value</label>
+    <input type="text" id="val" value="">
+    <input type="button" onclick="orderCar()" value="Order a car">
+</form>
 <form>
     <label for="form1_age">What is your age </label>
     <input type ="number" id="form1_age" name="form1_age" min=10 max=50 step=2 value=30> <br>
@@ -34,6 +53,32 @@ function resolveForm (){
     }
 }
 </script>
-
+<script>
+   var my_car = Object
+   function orderCar(){
+       let my_car = Object
+       if (document.getElementById("electirc").ariaChecked){
+           true
+       }
+       if (document.getElementById("ac").ariaChecked){
+            true
+       }
+       if (document.getElementById("gps").ariaChecked){
+           true
+       }
+       else{false}
+       out = document.getElementById("out")
+       out.innerHTML = my_car
+   }
+</script>
+<script>
+    function updateCar(){
+        property = document.getElementById("prop")
+        value = document.getElementById("val")
+        my_car = value
+        out = document.getElementById("out")
+        out.innerHTML = my_car
+    }
+</script>
 </body>
 </html> 
