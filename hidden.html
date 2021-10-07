@@ -21,8 +21,7 @@
 
 <p id="result">Result:</p>
 <div id="picChange">
-    <button 
-    <img src="cat.jpg" hight="200" width="200" alt="a picture of a cat" onClick("newImage()")>
+    <button <img src="cat.jpg" hight="200" width="200" alt="a picture of a cat" onClick("newImage()")</img>>
 </div>
 
 
@@ -44,9 +43,22 @@ function processPhrase(){
 }
 </script>
 <script>
-    var usingImage = 1
+    let usingImage = "1"
     function newImage(){
-
+        switch("picChange"){
+            case "1":
+            "picChange" = <img src="cat.jpg" hight="200" width="200" alt="a picture of a cat"></img>
+            usingImage = "2"
+            break;
+            case "2":
+            "picChange" = <img src="mongoose.jpg" hight="200" width="200" alt="a picture of a mongoose"></img>
+            usingImage = "3"
+            break;
+            case "3":
+            "picChange" = <img src="octopus.jpg" hight="200" width="200" alt="a picture of an octopus"></img>
+            usingImage = "1"
+            break;
+        }
     }
 </script>
 </body>
