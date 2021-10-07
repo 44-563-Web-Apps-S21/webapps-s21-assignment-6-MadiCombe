@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Looping Function</title>
+      <header>MCombe Computes</header>  
+    </head>
+    
+ 
+<body>
+
+<h2>Getting input</h2>
+
+<form>
+    <label for="form1_age">What is your age </label>
+    <input type ="number" id="form1_age" name="form1_age" min=10 max=50 step=2 value=30> <br>
+
+    <label for="form1_nick">What is your nickname </label>
+    <input type ="text" id="form1_nick" name="form1_nick" autofocus> <br>
+
+    <input type="button" onclick="resolveForm()" value="Get values from form">
+</form>
+<form>
+    <label>Enter a base</label>
+    <input type="number" value=10 id="inputBase">
+
+    <label>Enter an exponent</label>
+    <input type="number" value=2 id="inputExp">
+
+    <input type="button" onclick="powers()" value="Compute">
+
+</form>
+<p id="result">This text will be replaced </p>
+<p id="rightHere">Result here</p>
+
+
+<script> 
+function resolveForm (){
+    console.log("Getting form values")
+    age = document.getElementById("form1_age").value
+    nick = document.getElementById("form1_nick").value
+    confirmed = confirm("Are these the values? "+age+" and "+nick)
+    
+    out = document.getElementById("result")
+    if(confirmed){
+        out.innerHTML = "Values were confirmed"
+    } else {
+        out.innerHTML = "Values were not confirmed"
+    }
+}
+</script>
+<script>
+    function powers(){
+
+    }
+</script>
+</body>
+</html> 
