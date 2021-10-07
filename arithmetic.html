@@ -29,9 +29,24 @@
     <input type="button" onclick="powers()" value="Compute">
 
 </form>
+<form>
+    <input type="radio" id="plus" value="plus" onClick="processRadio()">
+        <label for="plus">+</label></br>
+      
+        <input type="radio" id="minus" value="minus" onClick="processRadio()">
+        <label for="minus">-</label></br>
+      
+        <input type="radio" id="times" value="times" onClick="processRadio()">
+        <label for="times">*</label></br>
+
+        <input type="radio" id="devide" value="devide" onClick="processRadio()">
+        <label for="devide">/</label></br>
+
+</form>
+
 <p id="result">This text will be replaced </p>
 <p id="rightHere">Result here</p>
-
+<p id="solved">Solved here</p>
 
 <script> 
 function resolveForm (){
@@ -54,11 +69,18 @@ function resolveForm (){
         exponent = document.getElementById("inputExp").value
         let result = ""
 
-        for( i=1; i<exponent; base^i){
-            result = i;
+        for( i=1; i<exponent; i++){
+            result = base ** i
         }
         out = document.getElementById("rightHere")
         out.innerHTML = "Powers of base are: " (result)
+    }
+</script>
+<script>
+    function processRadio(){
+        base = document.getElementById("inputBase")
+        exponent = document.getElementById("inputExp")
+        
     }
 </script>
 </body>
