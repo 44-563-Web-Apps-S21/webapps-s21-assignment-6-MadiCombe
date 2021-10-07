@@ -50,7 +50,15 @@ function resolveForm (){
 </script>
 <script>
     function powers(){
+        base = document.getElementById("inputBase").value
+        exponent = document.getElementById("inputExp").value
+        let result = ""
 
+        for( i=1; i<exponent; base^i){
+            result = i;
+        }
+        out = document.getElementById("rightHere")
+        out.innerHTML = "Powers of base are: " (result)
     }
 </script>
 </body>
